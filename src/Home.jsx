@@ -1,19 +1,96 @@
-import React from 'react'
-import b1 from './assets/1st.jpg'
+import React from 'react';
+import Slider from "react-slick";
+import b1 from './assets/book12.png';
+import b2 from './assets/book12.jpg';
+import b3 from './assets/book15.png';
+import "slick-carousel/slick/slick.css";
+import "slick-carousel/slick/slick-theme.css";
 
 const Home = () => {
-  return (
-    <div className=' flex flex-col justify-center items-center bg-orange-200 h-screen'>
-      <div>
-        <img src={b1} alt="1st" className='w-80 h-80 rounded-3xl mt-12'/>
-      </div>
-      <div>
-        <h1 className='text-5xl font-bold mb-2 text-gray-700 ml-5 mt-5'>Leaf and Lore</h1>
-        <p className='text-lg  mb-4'>"Where every page turns into a new journey."</p>
-        <button className='bg-blue-500 text-white py-2 px-4 rounded ml-27 animate-bounce'>Start journey</button>
-      </div>
-    </div>
-  )
-}
+  const settings = {
+    dots: true,
+    infinite: true,
+    speed: 500,
+    slidesToShow: 1,
+    slidesToScroll: 1,
+    autoplay: true,        // Enable automatic sliding
+    autoplaySpeed: 3000,   // 3 seconds per slide
+    pauseOnHover:false, 
+    
+       // Pause when hovering over the slide
+  };
 
-export default Home
+  return (
+    <div className=''>
+      <Slider {...settings}>
+
+        {/* Slide 1 */}
+        <div className='bg-orange-200 h-screen flex justify-center items-center'>
+          <div className='flex flex-row justify-center items-center'>
+            <div>
+              <img src={b1} alt="1st" className='w-140 h-140 rounded-3xl mt-12 mr-8' />
+            </div>
+            <div className='max-w-lg'>
+              <span>#1 BESTSELLER ON THE SHELF</span>
+              <h1 className='text-6xl font-bold mt-2'>Get Ready for a Reading Adventure!</h1>
+              <p className='mt-8'>Join us as we explore the magical world of books.</p>
+              <button className='bg-red-500 text-white py-2 px-4 rounded ml-5 mt-10 animate-bounce'>
+                📚 Read Now
+              </button>
+              <button className='text-black py-2 px-4 rounded ml-5 mt-10 animate-bounce'>
+                📖Your Bookshelf ➔
+              </button>
+            </div>
+          </div>
+        </div>
+
+        {/* Slide 2 */}
+        <div className='bg-orange-200 h-screen flex justify-center items-center'>
+          <div className='flex flex-row justify-center items-center'>
+            <div>
+              <img src={b2} alt="2nd" className='w-140 h-140 rounded-3xl mt-12 mr-8' />
+            </div>
+            <div className='max-w-lg'>
+              <span>#2 TOP BEST DUO</span>
+              <h1 className='text-6xl font-bold mt-2'>Bring Back MY Favorite Book</h1>
+              <p className='mt-8'>
+                Adino steals a rare bookmark from his brother Grahami and uses it to mark his favourite pages.
+                A voracious reader, Adino can't help himself. Grahami, organized blunt, is furious—he cannot
+                contain his frustration toward Adino.
+              </p>
+              <button className='bg-red-500 text-white py-2 px-4 rounded ml-5 mt-10 animate-bounce'>
+                📚 Read Now
+              </button>
+              <button className='text-black py-2 px-4 rounded ml-5 mt-10 animate-bounce'>
+                📖Your Bookshelf ➔
+              </button>
+            </div>
+          </div>
+        </div>
+
+        {/* Slide 3 */}
+        <div className='bg-orange-200 h-screen flex justify-center items-center'>
+          <div className='flex flex-row justify-center items-center'>
+            <div>
+              <img src={b3} alt="3rd" className='w-120 h-120 rounded-3xl mt-12 mr-8' />
+            </div>
+            <div className='max-w-lg'>
+              <span>#SOFT CORE LOVE</span>
+              <h1 className='text-6xl font-bold mt-2'>Love Journey of the Readers</h1>
+              <p className='mt-8'>Zade on a haunting journey through a shadowy realm, where love and danger intertwine.</p>
+              <button className='bg-red-500 text-white py-2 px-4 rounded ml-5 mt-10 animate-bounce'>
+                📚 Read Now
+              </button>
+              <button className='text-black py-2 px-4 rounded ml-5 mt-10 animate-bounce'>
+                📖Your Bookshelf ➔
+              </button>
+            </div>
+          </div>
+        </div>
+
+      </Slider>
+    </div>
+  );
+};
+
+export default Home;
