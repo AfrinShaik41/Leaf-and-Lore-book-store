@@ -30,7 +30,7 @@ const Upcoming = () => {
         {items.map((item, index) => (
           <div
             key={index}
-            className='relative bg-white rounded-xl p-4 shadow-lg flex flex-col items-center transform hover:rotate-[360deg] transition duration-[2000ms] ease-in-out'
+            className='relative bg-white rounded-xl p-4 shadow-lg flex flex-col items-center transform hover:translate-y-[-20px] transition duration-[0.3s] ease-in-out'
           >
             <img
               src={item.img}
